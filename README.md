@@ -1,7 +1,8 @@
 # Console Application CEP
 
-Esta aplicação roda em linha de comando, tem como função buscar o cep digitado como parametro e cadastrar no banco de dados.
-Outro comando valido para o script é o de listar todos dados cadastrado no banco de dados.
+Esta aplicação roda em linha de comando, tem como função buscar o CEP digitado como parâmetro e cadastrar no banco de dados.
+Outro comando valido para o script é o de listar todos dados cadastrados no banco de dados.
+
 
 ![](header.png)
 
@@ -11,7 +12,7 @@ Outro comando valido para o script é o de listar todos dados cadastrado no banc
 npm i.
 ```
 
->Após ter baixado todas dependencia utilizada no projeto, na linha de comando digite:
+>Após ter feito o download de todas dependências utilizadas no projeto, na linha de comando digite:
 
 >Para buscar e cadastrar CEP
 ```
