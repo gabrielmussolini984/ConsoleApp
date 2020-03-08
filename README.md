@@ -6,7 +6,10 @@ Outro comando valido para o script é o de listar todos dados cadastrado no banc
 ![](header.png)
 
 ## Utilização
->Clone o repositório e no terminal digite npm i.
+>Clone o repositório e no terminal digite:
+```
+npm i.
+```
 
 >Após ter baixado todas dependencia utilizada no projeto, na linha de comando digite:
 
