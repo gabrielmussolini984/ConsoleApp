@@ -6,12 +6,12 @@ Outro comando valido para o script é o de listar todos dados cadastrado no banc
 ![](header.png)
 
 ## Utilização
-Clone o repositório e no terminal digite npm i.
-Após ter baixado todas dependencia utilizada no projeto, na linha de comando digite:
-Para buscar e cadastrar CEP
-node index.js add 00000000 ou 00000-000
-Para listar todos CEP
-node index.js list
+>Clone o repositório e no terminal digite npm i.
+>Após ter baixado todas dependencia utilizada no projeto, na linha de comando digite:
+>Para buscar e cadastrar CEP
+>node index.js add 00000000 ou 00000-000
+>Para listar todos CEP
+>node index.js list
 
 ## Release History
 
