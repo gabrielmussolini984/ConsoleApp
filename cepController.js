@@ -10,16 +10,15 @@ const create = async(cep) =>{
       throw('Erro ao encontrar cep');
     }else{
       cepModel.insert(date);
-      return;
     }
   } catch (error) {
-    console.log(error);
-    return;
+    console.log(error); 
+    process.exit();
   }
 }
 
 const list = () =>{
-  cepModel.list();
+  cepModel.list() 
 }
 
 module.exports = {

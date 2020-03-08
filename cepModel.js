@@ -40,7 +40,7 @@ const insert = (date) => {
       return new Error('Erro ao inserir')
     }else{
       console.log('Dados inserido no banco de dados')
-      return;
+      process.exit();
     }
   });
 }
@@ -54,7 +54,7 @@ const list = () => {
     }else{
       let lista = JSON.stringify(rows);
       console.log(JSON.parse(lista));
-      return;
+      process.exit();
     }
   })
 }

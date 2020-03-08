@@ -16,7 +16,6 @@ program
     } catch (error) {
       console.log(error)
     }
-    
   });
 
 // Listando os CEP do banco
@@ -25,6 +24,7 @@ program
   .description('Lista todos endereço cadastrado no banco de dados.')
   .action(() => {
     cepController.list();
+    
   });
 
 
