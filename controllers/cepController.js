@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const cepModel = require('./cepModel');
+const cepModel = require('../models/cepModel');
 
 const create = async(cep) =>{
   try {

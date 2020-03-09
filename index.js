@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const program = require('commander');
 const package = require('./package.json');
+require('dotenv')
 
-const cepController = require('./cepController');
+const cepController = require('./controllers/cepController');
 
 program.version(package.version);
 

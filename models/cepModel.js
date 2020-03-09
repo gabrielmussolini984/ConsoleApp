@@ -1,9 +1,6 @@
-const mysql = require('mysql2');
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'test'
-});
+require('dotenv').config()
+const connection = require('../config/database');
+
 
 const createTable = `CREATE TABLE IF NOT EXISTS dados_dep (
   id int(11) NOT NULL AUTO_INCREMENT,
@@ -31,18 +28,21 @@ const insert = (date) => {
   // Inserindo Dados no banco.
   const {logradouro,bairro,localidade,uf,cep} = date.result;
   let dateJson = JSON.stringify(date);
-  const insertDate = `INSERT INTO dados_dep (retorno_api, cep, nome, endereco, bairro, estado, cidade)
-  VALUES ('${dateJson}', '${cep}', 'teste', '${logradouro}', '${bairro}', '${uf}', '${localidade}')`;
-
-  connection.query(insertDate, (err, rows) => {
-    if (err){
-      console.log('Erro ao salvar no banco de dados :'+err); 
-      return new Error('Erro ao inserir')
-    }else{
-      console.log('Dados inserido no banco de dados')
-      process.exit();
+  dateJson = JSON.parse(dateJson);
+  connection.execute(
+    'INSERT INTO dados_dep (retorno_api, cep, nome, endereco, bairro, estado, cidade) VALUES (?,?,?,?,?,?,?)',
+    [dateJson,cep,'teste',logradouro,bairro,uf,localidade],
+    function(err, results, fields) {
+      if (err){
+        console.log('Erro ao salvar no banco de dados :'+err); 
+        return new Error('Erro ao inserir');
+      }else{
+        console.log('Dados inserido no banco de dados')
+        process.exit();
+      }
     }
-  });
+  );
+
 }
 
 const list = () => {
